@@ -874,5 +874,25 @@ export const books: Book[] = [
     reviewCount: 16,
     inStock: true,
     featured: true,
+  },
+  {
+    id: '46',
+    title: 'Forensic Science: Crime Scene Investigation',
+    author: 'Dr. Lina Haddad',
+    description: 'An in-depth guide to forensic techniques, crime scene analysis, and evidence handling in modern criminal investigations.',
+    price: 72.50,
+    image: '/images/forensic_sci.jpg',
+    isbn: '978-9876543210',
+    genre: ['Forensic Science', 'Criminology'],
+    tags: ['Crime Scene', 'Investigation', 'Evidence', 'Forensics'],
+    datePublished: '2024-05-10',
+    pages: 560,
+    language: 'English',
+    publisher: 'Al-Muqaddim Press',
+    rating: 4.6,
+    reviewCount: 24,
+    inStock: true,
+    featured: true,
   }
+
 ];

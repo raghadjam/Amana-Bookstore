@@ -1,6 +1,9 @@
 import { MongoClient } from 'mongodb';
 
-const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017';
+const uri: string = process.env.MONGODB_URI as string;
+if (!uri) {
+  throw new Error("MONGO_URI is missing from environment variables");
+}
 const options = {};
 
 let client: MongoClient;
@@ -13,6 +16,7 @@ if (!process.env.MONGODB_URI) {
 if (process.env.NODE_ENV === 'development') {
   // In development, use global variable to preserve connection across hot reloads
   if (!(global as any)._mongoClientPromise) {
+    
     client = new MongoClient(uri, options);
     (global as any)._mongoClientPromise = client.connect();
   }

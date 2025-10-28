@@ -1,9 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 import { MongoClient } from 'mongodb';
-
-const uri = 'mongodb://localhost:27017';
-const client = new MongoClient(uri);
+const uri: string = process.env.MONGODB_URI as string;
+if (!uri) {
+  throw new Error("MONGO_URI is missing from environment variables");
+}const client = new MongoClient(uri);
 
 async function seed() {
   try {

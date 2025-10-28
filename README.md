@@ -18,7 +18,7 @@ Amana Bookstore is a full-stack web application built with **Next.js** and **Mon
 ### Technologies Used
 
 * **Next.js (App Router, React 18+)** – Frontend framework and server-side API routes.
-* **TypeScript** – Type safety across the project.
+* **TypeScript** 
 * **MongoDB Atlas** – Cloud-based NoSQL database for storing books, reviews, and cart items.
 * **Tailwind CSS** – Styling framework for a clean, responsive design.
 
